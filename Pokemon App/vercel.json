@@ -1,3 +1,11 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  {
+  "routes": [
+    { "src": "/", "dest": "/" },
+    { "src": "/home", "dest": "/" }
+    { "src": "/pokedex", "dest": "/" }
+    { "src": "/create_pokemon", "dest": "/" }
+    { "src": "/favorites", "dest": "/" }
+  ]
+}
 }
