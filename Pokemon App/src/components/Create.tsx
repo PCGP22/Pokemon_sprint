@@ -27,19 +27,7 @@ function Create() {
     water: false,
   };
 
-  type StatsProps = "hp" | "att" | "def" | "sp_att" | "sp_def" | "speed";
-
-  let stats = {
-    hp: true,
-    att: true,
-    def: true,
-    sp_att: true,
-    sp_def: true,
-    speed: true,
-  };
-
   const [hp, setHp] = useState(true);
-  const [attack, setAttack] = useState(true);
 
   const hiddenFileInput: any = useRef(null);
   const [visible, setVisible] = useState(false);

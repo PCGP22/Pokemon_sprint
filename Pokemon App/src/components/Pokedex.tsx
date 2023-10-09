@@ -13,7 +13,6 @@ import Footer from "./Footer";
 type PokedexProps = {
   id: number;
 };
-let reload = false;
 function Pokedex(props: PokedexProps) {
   const [id, setId] = useState<number>(props.id);
   const [description, setDescription] = useState<string>("Loading description");

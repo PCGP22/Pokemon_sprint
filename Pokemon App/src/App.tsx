@@ -4,9 +4,7 @@ import LandingPage from "./components/LandingPage.tsx";
 import HomePage from "./components/HomePage.tsx";
 import Pokedex from "./components/Pokedex.tsx";
 import Create from "./components/Create.tsx";
-import Login from "./components/Login.tsx";
 import Favorites from "./components/favorites.tsx";
-import Register from "./components/Register.tsx";
 import { getData, processData } from "./redux/slices/data/thunks.ts";
 import { useAppSelector, useAppDispatch } from "./redux/hooks.tsx";
 import axios from "axios";
@@ -64,9 +62,9 @@ function App() {
   useEffect(() => {
     setData(processedPokemon);
   }, [processedPokemon]);
-  let rel;
+
   if (!data.length && stop) {
-    rel = setTimeout(() => setAux(!aux), 200);
+    setTimeout(() => setAux(!aux), 200);
   }
 
   return (
@@ -74,8 +72,6 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<HomePage data={data} />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
         <Route path="/pokedex" element={<Pokedex id={1} />} />
         <Route path="/create_pokemon" element={<Create />} />
         <Route

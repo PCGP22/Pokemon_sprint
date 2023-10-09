@@ -67,12 +67,6 @@ function Slider(props: sliderProps) {
     if (value > 75) color = "#44db4e";
   }
 
-  function handleReset() {
-    setWidth(60 * (maxWidth / 150));
-    value = 60;
-    color = "#f0f056";
-  }
-
   function handleClick(e: any) {
     console.log(e.clientX);
     if (e.clientX !== 0) {

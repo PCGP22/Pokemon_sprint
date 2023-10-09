@@ -14,44 +14,6 @@ type ApiResponse = {
   results: PokemonInfo[];
 };
 
-type FullPokemonInfo = {
-  abilities: object[];
-  base_experience: number;
-  forms: object[];
-  game_indices: object[];
-  height: number;
-  held_items: [] | object[];
-  id: number;
-  is_default: boolean;
-  location_area_encounters: string;
-  moves: object[];
-  name: string;
-  order: number;
-  past_types: [] | object[];
-  species: object;
-  sprites: {
-    front_default: string;
-    back_default: string;
-  };
-  stats: object[];
-  types: [
-    {
-      slot: number;
-      type: {
-        name: string;
-        url: string;
-      };
-    }
-  ];
-  weight: number;
-};
-
-type PokeData = {
-  name: string;
-  url: string;
-};
-
-
 
 export const getData = () => {
   return async (dispatch: AppDispatch) => {
