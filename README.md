@@ -28,7 +28,7 @@ The features that I could implement in time are:
   + Visuals
 
 Captures: <br/>
-<img src="./Maquetation.jpg" alt="Proyect Landing Page" width="400"/><br/>
+<img src="https://drive.google.com/uc?export=download&id=1y1bgitpENfkyoqj4lBkjKo6qf3OhQhBq" alt="Proyect Landing Page" width="400"/><br/>
 Maquetation (made in Illustrator)
 
 <img src="https://drive.google.com/uc?export=download&id=1-gGwfthQGfXBg7ClwLeC_W3ChXolt9ph" alt="Pokemon LandingPage" width="400"/><br/>
