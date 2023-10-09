@@ -32,5 +32,14 @@
     "sass": "^1.68.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
-  }
+  },
+  {
+  "routes": [
+    { "src": "/", "dest": "/" },
+    { "src": "/home", "dest": "/" },
+    { "src": "/pokedex", "dest": "/" },
+    { "src": "/create_pokemon", "dest": "/" },
+    { "src": "/favorites", "dest": "/" }
+  ]
+}
 }
