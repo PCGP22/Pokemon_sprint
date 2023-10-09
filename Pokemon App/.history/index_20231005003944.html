@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="google-signin-client_id"
+      content="435454517185-mteumdmd34v0rtn854fph4npai3a3lvd.apps.googleusercontent.com" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./dist/SCSS/main.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- <script src="https://apis.google.com/js/api.js"></script> -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        var user_name = profile.getName();
+        alert(user_name);
+      }
+
+      function onLoad() {
+        gapi.load("auth2,signin2", function () {
+          var auth2 = gapi.auth2.init();
+          auth2.then(function () {
+            // Current values
+            var isSignedIn = auth2.isSignedIn.get();
+            var currentUser = auth2.currentUser.get();
+
+            if (!isSignedIn) {
+              // Rendering g-signin2 button.
+              gapi.signin2.render("google-signin-button", {
+                onsuccess: "onSignIn",
+              });
+            }
+          });
+        });
+      }
+    </script>
+    <script
+      src="https://apis.google.com/js/platform.js?onload=onLoad"
+      async
+      defer></script>
+  </body>
+</html>

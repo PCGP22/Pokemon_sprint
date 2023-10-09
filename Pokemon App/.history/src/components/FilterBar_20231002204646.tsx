@@ -1,0 +1,36 @@
+import React, { useState } from "react";
+import { useAppDispatch } from "../redux/hooks";
+import { setSearch } from "../redux/slices/data";
+
+function FilterBar() {
+  const [searchTerm, setSearchTerm] = useState<string>("");
+
+  const dispatch = useAppDispatch();
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setSearchTerm(e.target.value);
+  }
+
+  function handleSearch() {
+    if (searchTerm.length > 0) {
+      dispatch(setSearch(searchTerm));
+    }
+  }
+
+  return (
+    <section>
+      <button>Filters</button>
+      <div>
+        <input
+          type="text"
+          placeholder="Search by name"
+          value={searchTerm}
+          onChange={handleChange}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
+    </section>
+  );
+}
+
+export default FilterBar;
