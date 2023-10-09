@@ -6,7 +6,7 @@ of a limited time challenge. <br/>
 
 I took a day for studying and seven days for <br/>
 programming, which ended in this visually <br/>
-appealing altough incomplete project.
+appealing although incomplete project.
 
 The features that I could implement in time are:
 
